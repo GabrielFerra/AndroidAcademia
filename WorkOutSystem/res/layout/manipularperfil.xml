@@ -1,0 +1,283 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_padrao"
+    android:gravity="top"
+    android:orientation="vertical"
+    android:padding="5dp" >
+
+    <TabHost
+        android:id="@+id/tabperfil"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical" >
+
+            <TabWidget
+                android:id="@android:id/tabs"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+            </TabWidget>
+
+            <FrameLayout
+                android:id="@android:id/tabcontent"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" >
+
+                
+
+                    <LinearLayout
+                        android:id="@+id/tabpessoal"
+                        android:layout_width="fill_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:orientation="vertical" >
+
+                        <LinearLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                         
+                            android:weightSum="100" >
+
+                            <TextView
+                                android:id="@+id/tv_nome"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="50"
+                                android:text="@string/label_nomeapelido"
+                                android:textColor="@android:color/white" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:padding="5dp"
+                            android:weightSum="100" >
+
+                            <EditText
+                                android:id="@+id/etNome"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="50" 
+                                android:inputType="text"/>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:padding="5dp"
+                            android:weightSum="100" >
+
+                            <TextView
+                                android:id="@+id/textView2"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="50"
+                                android:text="@string/label_datanasc"
+                                android:textColor="@android:color/white" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                         
+                            android:weightSum="100" >
+
+                            <EditText
+                                android:id="@+id/etDtNasc"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="50"
+                                android:inputType="date" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                          
+                            android:weightSum="100" >
+
+                            <TextView
+                                android:id="@+id/tv_sexo"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="50"
+                                android:text="@string/label_sexo"
+                                android:textColor="@android:color/white" />
+                        </LinearLayout>
+
+                        <RadioGroup
+                            android:id="@+id/radio_group_sexo"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                           
+                            android:weightSum="100" >
+
+                            <RadioButton
+                                android:id="@+id/rb_feminino"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="50"
+                                android:text="@string/radio_feminino"
+                                android:textColor="@android:color/white" />
+
+                            <RadioButton
+                                android:id="@+id/rb_masculino"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="50"
+                                android:text="@string/radio_masculino"
+                                android:textColor="@android:color/white" />
+                        </RadioGroup>
+                    </LinearLayout>
+               
+
+                <LinearLayout
+                    android:id="@+id/tabfrequencia"
+                    android:layout_width="fill_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:orientation="vertical" >
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:padding="5dp"
+                        android:weightSum="120" >
+
+                        <TextView
+                            android:id="@+id/tv_frequencia"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/label_frequencia"
+                            android:textColor="@android:color/white" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:padding="5dp"
+                        android:weightSum="120" >
+
+                        <CheckBox
+                            android:id="@+id/check_segunda"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="40"
+                            android:text="@string/check_segunda"
+                            android:textColor="@android:color/white" />
+
+                        <CheckBox
+                            android:id="@+id/check_terca"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="40"
+                            android:text="@string/check_terca"
+                            android:textColor="@android:color/white" />
+
+                        <CheckBox
+                            android:id="@+id/check_quarta"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="40"
+                            android:text="@string/check_quarta"
+                            android:textColor="@android:color/white" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:padding="5dp"
+                        android:weightSum="120" >
+
+                        <CheckBox
+                            android:id="@+id/check_quinta"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="40"
+                            android:text="@string/check_quinta"
+                            android:textColor="@android:color/white" />
+
+                        <CheckBox
+                            android:id="@+id/check_sexta"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="40"
+                            android:text="@string/check_sexta"
+                            android:textColor="@android:color/white" />
+
+                        <CheckBox
+                            android:id="@+id/check_sabado"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="40"
+                            android:text="@string/check_sabado"
+                            android:textColor="@android:color/white" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:padding="5dp"
+                        android:weightSum="120" >
+
+                        <CheckBox
+                            android:id="@+id/check_domingo"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="40"
+                            android:text="@string/check_domingo"
+                            android:textColor="@android:color/white" />
+                    </LinearLayout>
+                </LinearLayout>
+            </FrameLayout>
+        </LinearLayout>
+    </TabHost>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0"
+        android:background="@android:color/darker_gray"
+        android:orientation="horizontal"
+        android:padding="5dp"
+        android:weightSum="90" >
+
+        <Button
+            android:id="@+id/btn_cadperfil"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="30"
+            android:text="@string/botao_salvar" />
+
+        <Button
+            android:id="@+id/btn_altperfil"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="30"
+            android:text="@string/botao_alterar" />
+
+        <Button
+            android:id="@+id/btn_excperfil"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="30"
+            android:text="@string/botao_excluir" />
+    </LinearLayout>
+
+</LinearLayout>
